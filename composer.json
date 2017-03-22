@@ -1,0 +1,10 @@
+{
+    "require": {
+        "php": ">=5.2.4",
+        "codeigniter/framework": ">=3.0",
+        "hanischit/codeigniter-restserver": "^1.0"
+    },
+    "require-dev": {
+        "zircote/swagger-php": "*"
+    }
+}
