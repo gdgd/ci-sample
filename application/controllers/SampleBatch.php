@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Users extends Restserver\Libraries\REST_Controller {
+class Sample extends Restserver\Libraries\REST_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,8 +20,23 @@ class Users extends Restserver\Libraries\REST_Controller {
 	 */
 	public function index_get()
 	{
+		//リクエストを取得する
+		//取得方法はgetに変数名を指定することで取得可能
+		$test1 = $this->get('test1');
+		$test2 = $this->get('test2');
+		$test3 = $this->get('test3');
 		
+		$this->load->models();
+
 		
-		$this->response(array('sample'=>array('id' =>'1234567890','tmp'=>'test')),200);
+		$this->set_response(array('message'=>$test1.$test2.$test3),200);
+	}
+	
+	public function index_post()
+	{
+		//DB接続はできないのでコメントアウト
+		// $this->load->database();
+
+		$this->set_response(array('message'=>$test1.$test2.$test3),200);
 	}
 }

@@ -52,3 +52,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+//api
+$route['api/sample']['GET'] = 'SampleApi/index';
+$route['api/sample']['POST'] = 'SampleApi/index';
+$route['api/sample']['PUT'] = 'SampleApi/index';
+$route['api/sample']['DELETE'] = 'SampleApi/index';
+
+$route['www/sample'] = 'SampleWeb/index';
+
+//バッチはwebとほぼおなじ仕組み
+$route['batch/sample'] = 'SampleBatch/index';
+
